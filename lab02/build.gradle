@@ -5,5 +5,8 @@ repositories{
     jcenter()
 }
 jar {
-    manifest attributes 'MainClass':'src.main.CSVDemo'
+    manifest{
+
+     attributes 'MainClass':'src.main.java.cscu2020u.lab02.basic'
+    }
 }
