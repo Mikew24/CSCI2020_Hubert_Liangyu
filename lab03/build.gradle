@@ -1,5 +1,6 @@
 plugins{
     id 'java'
+
 }
 repositories{
     jcenter()
@@ -15,4 +16,9 @@ jar {
     
      attributes  'Main-Class':'src.main.java.cscu2020u.lab02.CSVDemo'
     }
+}
+apply plugin: "java"
+task sourcesJar(type: Jar){
+    classifier ' custom'
+
 }
