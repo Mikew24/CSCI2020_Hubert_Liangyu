@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-title: CSV Jar
+Implementation-title: CSVJar
 Implementation-Version: 1.00
 Main-Class: src.main.java.cscu2020u.lab03.CSVDemo
 
