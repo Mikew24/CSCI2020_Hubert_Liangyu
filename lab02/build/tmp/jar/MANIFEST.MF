@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+MainClass: src.main.java.cscu2020u.lab02.basic
+

@@ -1,0 +1,15 @@
+plugins{
+    id 'java'
+}
+repositories{
+    jcenter()
+}
+    dependencies{
+        implementation 'org.apache.commons:commons-csv:1.6'
+    }
+jar {
+    manifest{
+
+     attributes 'MainClass':'src.main.java.cscu2020u.lab02.CSVDemo'
+    }
+}

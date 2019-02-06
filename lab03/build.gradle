@@ -1,0 +1,24 @@
+plugins{
+    id 'java'
+
+}
+repositories{
+    jcenter()
+    mavenCentral()
+    mavenLocal()
+}
+dependencies{
+       //compile "org.apache.commons:commons-csv:1.6"
+       compile group: 'org.apache.commons', name: 'commons-csv', version: '1.6'
+    }
+jar {
+    manifest{
+    
+     attributes  'Main-Class':'src.main.java.cscu2020u.lab02.CSVDemo'
+    }
+}
+apply plugin: "java"
+task sourcesJar(type: Jar){
+    classifier ' custom'
+
+}
