@@ -13,12 +13,15 @@ dependencies{
     }
 jar {
     manifest{
-    
-     attributes  'Main-Class':'src.main.java.cscu2020u.lab02.CSVDemo'
+
+     attributes  'Main-Class':'src.main.java.cscu2020u.lab03.CSVDemo',
+     'Implementation-title': 'CSV Jar',
+     'Implementation-Version':1.00
+
     }
 }
 apply plugin: "java"
-task sourcesJar(type: Jar){
-    classifier ' custom'
-
+task (run, dependsOn: 'classes',type: JavaExec) {
+  main = 'csci2020u.lab03.CSVDemo'
+  classpath = sourceSets.main.runtimeClasspath
 }

@@ -1,10 +1,11 @@
+package csci2020u.lab03;
 import java.io.*;
 import org.apache.commons.csv.*;
 public class CSVDemo {
     public static void main(String[] args) {
         try {
-            Reader in = new FileReader("/home/michael/Documents/CSCI2020Lab/lab03/data.csv");
-            Iterable<CSVRecord> records = 
+            Reader in = new FileReader("C:\\Users\\Michael\\Documents\\CSCI2020group\\lab03\\src\\main\\java\\csci2020u\\lab03\\data.csv");
+            Iterable<CSVRecord> records =
             CSVFormat.DEFAULT.withHeader("First Name", "Last Name", "SID", "Grade").parse(in);
             for (CSVRecord record: records) {
                 String lastName = record.get("Last Name");
@@ -15,5 +16,5 @@ public class CSVDemo {
         } catch (IOException e) {
                 e.printStackTrace();
             }
-    }   
+    }
 }
