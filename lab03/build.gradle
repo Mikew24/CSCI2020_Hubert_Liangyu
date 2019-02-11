@@ -1,12 +1,24 @@
+buildscript{
+  repositories{
+    flatDir dirs: 'C:\\Users\\Michael\\Documents\\CSCI2020group\\proguard6.0.3\\lib'
+
+  }
+  dependencies{
+    classpath ':proguard:'
+
+  }
+}
 plugins{
     id 'java'
 
 }
+
 repositories{
     jcenter()
     mavenCentral()
     mavenLocal()
 }
+
 dependencies{
        //compile "org.apache.commons:commons-csv:1.6"
        compile group: 'org.apache.commons', name: 'commons-csv', version: '1.6'
@@ -14,6 +26,7 @@ dependencies{
 jar {
     manifest{
 
+<<<<<<< HEAD
      attributes  'Main-Class':'src.main.java.cscu2020u.lab02.CSVDemo'
      'Implementation-title' : 'CSV Jar',
      'Implementation-version' : 1.00
@@ -24,4 +37,21 @@ task (run,dependsOn: 'classes',type: JavaExec){
     main = ' csci2020u.lab03.CSVDemo'
     classpath = sourceSets.main.runtimeClasspath
 
+=======
+     attributes  'Main-Class':'src.main.java.cscu2020u.lab03.CSVDemo',
+     'Implementation-title': 'CSVJar',
+     'Implementation-Version':1.00
+
+    }
+}
+apply plugin: "java"
+task (run, dependsOn: 'classes',type: JavaExec) {
+  main = 'csci2020u.lab03.CSVDemo'
+  classpath = sourceSets.main.runtimeClasspath
+}
+task (minify, dependsOn: 'jar', type: proguard.gradle.ProGuardTask){
+  configuration 'C:\\Users\\Michael\\Documents\\CSCI2020group\\proguard6.0.3\\proguard.cfg'
+  injars 'build/libs/lab03.jar'
+  outjars 'build/libs/CSVmini.min.jar'
+>>>>>>> e92e419d4db8819d042235f5b7f9d67cc8851399
 }
